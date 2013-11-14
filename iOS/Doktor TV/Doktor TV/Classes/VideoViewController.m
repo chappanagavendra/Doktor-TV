@@ -108,21 +108,21 @@
 		NSLog(@"%@",urlString);
 	}
 	
-	return;
 	
 	
 	// AFNETWORKING
 	
 	
-	NSString *query = @"/programcard?Title=$eq(%22Borgen%20afsnit%2012%22)";
-//	query = @"/programcard?Title=$eq(\"Borgen afsnit 12\")";
-	
 	NSURL *URL = [NSURL URLWithString:@"http://www.dr.dk/mu"];
 	AFHTTPSessionManager *manager = [[AFHTTPSessionManager alloc] initWithBaseURL:URL];
+	
+	NSString *query =  @"http://www.dr.dk/mu/programcard?Title=$eq(%22Borgen%20afsnit%2012%22)";
+	
 	[manager GET:query parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
 //		[resources addObjectsFromArray:responseObject[@"resources"]];
 		
-		NSLog(@"%@",responseObject);
+		NSLog(@"RESPONSE: %@",responseObject);
+		
 //		[manager SUBSCRIBE:query usingBlock:^(NSArray *operations, NSError *error) {
 //			for (AFJSONPatchOperation *operation in operations) {
 //				switch (operation.type) {
@@ -135,7 +135,7 @@
 //			}
 //		} error:nil];
 	} failure:^(NSURLSessionDataTask *task, NSError *error) {
-		NSLog(@"%@",error);
+		NSLog(@"ERROR: %@",error);
 	}];
 }
 
