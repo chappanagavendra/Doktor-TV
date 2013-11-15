@@ -105,10 +105,11 @@
 		NSDictionary* json = [NSJSONSerialization JSONObjectWithData:urlData options:kNilOptions error:&error];
 		NSLog(@"%@",json);
 		
-		NSLog(@"%@",urlString);
+//		NSLog(@"%@",urlString);
 	}
 	
 	
+	return;
 	
 	// AFNETWORKING
 	
