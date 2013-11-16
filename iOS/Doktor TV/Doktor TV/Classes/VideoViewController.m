@@ -95,7 +95,7 @@
 {
 	// SYNCHRON
 	
-	NSString *stringURL = @"http://www.dr.dk/mu/programcard?Title=$eq(%22Borgen%20afsnit%2012%22)";
+	NSString *stringURL = @"http://www.dr.dk/mu/manifest/urn:dr:mu:manifest:5280b5ec6187a20b6c913965";
 	NSURL  *url = [NSURL URLWithString:stringURL];
 	NSData *urlData = [NSData dataWithContentsOfURL:url];
 	NSString *urlString = [NSString stringWithContentsOfURL:url encoding:(NSUTF8StringEncoding) error:nil];
